@@ -1,0 +1,16 @@
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\SoundLabSocial.Contracts.dll.config
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\SoundLabSocial.Contracts.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\SoundLabSocial.Contracts.pdb
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\EntityFramework.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\EntityFramework.xml
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\obj\Debug\SoundLabSocial.Contracts.csprojAssemblyReference.cache
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\obj\Debug\SoundLabSocial.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\obj\Debug\SoundLabSocial.Contracts.csproj.CopyComplete
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\obj\Debug\SoundLabSocial.Contracts.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Contracts\obj\Debug\SoundLabSocial.Contracts.pdb

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundLabSocial", "SoundLabSocial\SoundLabSocial.csproj", "{889B1A85-2982-4EBB-82D8-FCB577913DCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundLabSocial.Data", "SoundLabSocial.Data\SoundLabSocial.Data.csproj", "{D3CB5039-D6D8-4178-88CE-A40DD15C146C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundLabSocial.Models", "SoundLabSocial.Models\SoundLabSocial.Models.csproj", "{BC0F533B-45B7-4A8C-AC3D-F5B09D553542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundLabSocial.Services", "SoundLabSocial.Services\SoundLabSocial.Services.csproj", "{C5F4C7E6-5DFB-489E-892B-69C103BFFA03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundLabSocial.Contracts", "SoundLabSocial.Contracts\SoundLabSocial.Contracts.csproj", "{54568321-AA7B-4FCD-A9EE-A1A281EBCB4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundLabSocial.Tests", "SoundLabSocial.Tests\SoundLabSocial.Tests.csproj", "{95299CA5-9C15-4F80-89CA-36D2AE1D7373}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{889B1A85-2982-4EBB-82D8-FCB577913DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889B1A85-2982-4EBB-82D8-FCB577913DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889B1A85-2982-4EBB-82D8-FCB577913DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889B1A85-2982-4EBB-82D8-FCB577913DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3CB5039-D6D8-4178-88CE-A40DD15C146C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3CB5039-D6D8-4178-88CE-A40DD15C146C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3CB5039-D6D8-4178-88CE-A40DD15C146C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3CB5039-D6D8-4178-88CE-A40DD15C146C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC0F533B-45B7-4A8C-AC3D-F5B09D553542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC0F533B-45B7-4A8C-AC3D-F5B09D553542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC0F533B-45B7-4A8C-AC3D-F5B09D553542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC0F533B-45B7-4A8C-AC3D-F5B09D553542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F4C7E6-5DFB-489E-892B-69C103BFFA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F4C7E6-5DFB-489E-892B-69C103BFFA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F4C7E6-5DFB-489E-892B-69C103BFFA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F4C7E6-5DFB-489E-892B-69C103BFFA03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54568321-AA7B-4FCD-A9EE-A1A281EBCB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54568321-AA7B-4FCD-A9EE-A1A281EBCB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54568321-AA7B-4FCD-A9EE-A1A281EBCB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54568321-AA7B-4FCD-A9EE-A1A281EBCB4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95299CA5-9C15-4F80-89CA-36D2AE1D7373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95299CA5-9C15-4F80-89CA-36D2AE1D7373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95299CA5-9C15-4F80-89CA-36D2AE1D7373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95299CA5-9C15-4F80-89CA-36D2AE1D7373}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2435A2E4-49E1-44BF-B897-57F7A83B0A31}
+	EndGlobalSection
+EndGlobal
