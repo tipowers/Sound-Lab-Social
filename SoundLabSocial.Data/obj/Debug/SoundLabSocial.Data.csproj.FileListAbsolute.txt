@@ -14,3 +14,7 @@ C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabS
 C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.csproj.CopyComplete
 C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.dll
 C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.pdb
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.Migrations.InitialCreate.resources
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.csproj.GenerateResource.cache
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.Migrations.InitialMigration.resources
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.Migrations.AddedPersonalAudioAndPlaylistTables.resources

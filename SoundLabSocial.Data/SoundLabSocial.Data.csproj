@@ -55,12 +55,38 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202104130000102_InitialCreate.cs" />
+    <Compile Include="Migrations\202104130000102_InitialCreate.Designer.cs">
+      <DependentUpon>202104130000102_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104130006243_InitialMigration.cs" />
+    <Compile Include="Migrations\202104130006243_InitialMigration.Designer.cs">
+      <DependentUpon>202104130006243_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104130025075_AddedPersonalAudioAndPlaylistTables.cs" />
+    <Compile Include="Migrations\202104130025075_AddedPersonalAudioAndPlaylistTables.Designer.cs">
+      <DependentUpon>202104130025075_AddedPersonalAudioAndPlaylistTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PersonalAudio.cs" />
+    <Compile Include="Playlist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Song.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104130000102_InitialCreate.resx">
+      <DependentUpon>202104130000102_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104130006243_InitialMigration.resx">
+      <DependentUpon>202104130006243_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104130025075_AddedPersonalAudioAndPlaylistTables.resx">
+      <DependentUpon>202104130025075_AddedPersonalAudioAndPlaylistTables.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
