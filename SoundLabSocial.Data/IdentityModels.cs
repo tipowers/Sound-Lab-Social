@@ -32,7 +32,9 @@ namespace SoundLabSocial.Data
             return new ApplicationDbContext();
         }
 
+        public DbSet<Playlist> Playlists { get; set; }
         public DbSet<Song> Songs { get; set; }
+        public DbSet<PersonalAudio> PersonalAudios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,8 @@ namespace SoundLabSocial.Data
         public int AudioId { get; set; }
 
         [Required]
-        //Foreign Key here ....
-        //Revisit Simon's video
-        //Also GUID ??? 
+        [ForeignKey(nameof(UserId))]
+        //GUID ??? 
         public int UserId { get; set; }
 
         [Required]
@@ -25,5 +25,7 @@ namespace SoundLabSocial.Data
         public DateTimeOffset CreatedUTC { get; set; }
 
         public DateTimeOffset? ModifiedUTC { get; set; }
+
+        public virtual ICollection<Playlist> Playlists { get; set; } = new List<Playlist>();
     }
 }
