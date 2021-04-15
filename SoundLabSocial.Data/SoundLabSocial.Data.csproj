@@ -67,6 +67,14 @@
     <Compile Include="Migrations\202104130025075_AddedPersonalAudioAndPlaylistTables.Designer.cs">
       <DependentUpon>202104130025075_AddedPersonalAudioAndPlaylistTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104150209406_FinalizedDataModels.cs" />
+    <Compile Include="Migrations\202104150209406_FinalizedDataModels.Designer.cs">
+      <DependentUpon>202104150209406_FinalizedDataModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104152255122_ActualFinalizedDataModels...ForNow.cs" />
+    <Compile Include="Migrations\202104152255122_ActualFinalizedDataModels...ForNow.Designer.cs">
+      <DependentUpon>202104152255122_ActualFinalizedDataModels...ForNow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PersonalAudio.cs" />
     <Compile Include="Playlist.cs" />
@@ -86,6 +94,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104130025075_AddedPersonalAudioAndPlaylistTables.resx">
       <DependentUpon>202104130025075_AddedPersonalAudioAndPlaylistTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104150209406_FinalizedDataModels.resx">
+      <DependentUpon>202104150209406_FinalizedDataModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104152255122_ActualFinalizedDataModels...ForNow.resx">
+      <DependentUpon>202104152255122_ActualFinalizedDataModels...ForNow.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

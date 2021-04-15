@@ -18,10 +18,11 @@ namespace SoundLabSocial.Data
         public string Id { get; set; }       
         public virtual ApplicationUser ApplicationUser { get; set; }
 
+        //Maybe required annotation here???
         public virtual ICollection<Song> Song { get; set; }
 
         [ForeignKey(nameof(PersonalAudio))]
-        public int PersonalAudioId { get; set; }
+        public int? PersonalAudioId { get; set; }
         public virtual PersonalAudio PersonalAudio { get; set; }
 
         [Required]
