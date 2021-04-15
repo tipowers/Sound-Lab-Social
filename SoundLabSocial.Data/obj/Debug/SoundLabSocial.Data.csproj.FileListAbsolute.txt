@@ -20,3 +20,4 @@ C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabS
 C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.Migrations.AddedPersonalAudioAndPlaylistTables.resources
 C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.Migrations.FinalizedDataModels.resources
 C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.Migrations.ActualFinalizedDataModelsForNow.resources
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Data\obj\Debug\SoundLabSocial.Data.Migrations.AddedPlayListNamePropertyToPlaylistTable.resources

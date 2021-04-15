@@ -75,6 +75,10 @@
     <Compile Include="Migrations\202104152255122_ActualFinalizedDataModels...ForNow.Designer.cs">
       <DependentUpon>202104152255122_ActualFinalizedDataModels...ForNow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104152328475_AddedPlayListNamePropertyToPlaylistTable.cs" />
+    <Compile Include="Migrations\202104152328475_AddedPlayListNamePropertyToPlaylistTable.Designer.cs">
+      <DependentUpon>202104152328475_AddedPlayListNamePropertyToPlaylistTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PersonalAudio.cs" />
     <Compile Include="Playlist.cs" />
@@ -100,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104152255122_ActualFinalizedDataModels...ForNow.resx">
       <DependentUpon>202104152255122_ActualFinalizedDataModels...ForNow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104152328475_AddedPlayListNamePropertyToPlaylistTable.resx">
+      <DependentUpon>202104152328475_AddedPlayListNamePropertyToPlaylistTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
