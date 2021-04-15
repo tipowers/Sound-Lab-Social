@@ -13,13 +13,10 @@ namespace SoundLabSocial.Data
         [Key]
         public int SongId { get; set; }
 
-        [Required] //... is a UserId required for a song to exist?
-        // I would say at this point yes, since I have to manually add songs
-        // But once using Spotify API this would no longer be necessary?
-        // Follow-up on this line of questioning and ensure to migrate tables!!!
-        [ForeignKey(nameof(UserId))]
-        //GUID ??? 
-        public int UserId { get; set; }
+        [Required] 
+        [ForeignKey(nameof(ApplicationUser))]
+        public string Id { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
         [Required]
         public string SongName { get; set; }

@@ -14,20 +14,14 @@ namespace SoundLabSocial.Data
         public int PlaylistId { get; set; }
 
         [Required]
-        [ForeignKey(nameof(UserId))]
-        //GUID ??? 
-        public int UserId { get; set; }
-        //Do I need a virtual list of users here?
+        [ForeignKey(nameof(ApplicationUser))]
+        public string Id { get; set; }       
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
-        //SongId not required because playlist is initially empty.
-        //Actually it's not empty because it will be auto-filled with my songs
-        [ForeignKey(nameof(Song))]
-        public int SongId { get; set; }
-        public virtual Song Song { get; set; }
+        public virtual ICollection<Song> Song { get; set; }
 
         [ForeignKey(nameof(PersonalAudio))]
         public int PersonalAudioId { get; set; }
-        // Do I need a list here if only one audio file is tied to the playlist?
         public virtual PersonalAudio PersonalAudio { get; set; }
 
         [Required]

@@ -14,9 +14,9 @@ namespace SoundLabSocial.Data
         public int AudioId { get; set; }
 
         [Required]
-        [ForeignKey(nameof(UserId))]
-        //GUID ??? 
-        public int UserId { get; set; }
+        [ForeignKey(nameof(ApplicationUser))]
+        public string Id { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
         [Required]
         public string AudioName { get; set; }
