@@ -54,11 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PersonalAudioService.cs" />
+    <Compile Include="PlaylistService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SongService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SoundLabSocial.Data\SoundLabSocial.Data.csproj">
+      <Project>{d3cb5039-d6d8-4178-88ce-a40dd15c146c}</Project>
+      <Name>SoundLabSocial.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoundLabSocial.Models\SoundLabSocial.Models.csproj">
+      <Project>{bc0f533b-45b7-4a8c-ac3d-f5b09d553542}</Project>
+      <Name>SoundLabSocial.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
