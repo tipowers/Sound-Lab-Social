@@ -16,5 +16,16 @@ namespace SoundLabSocial.Controllers
             var model = new PlaylistListItem[0];
             return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(PlaylistCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }

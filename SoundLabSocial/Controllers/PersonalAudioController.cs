@@ -16,5 +16,16 @@ namespace SoundLabSocial.Controllers
             var model = new PersonalAudioListItem[0];
             return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(PersonalAudioCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }

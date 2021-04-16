@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 
 namespace SoundLabSocial.Models
 {
-    public class PersonalAudioListItem
+    public class PersonalAudioCreate
     {
+        [Required]
         [Display(Name = "Personal Audio Name")]
+        [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
+        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string AudioName { get; set; }
-
-        [Display(Name = "Created")]
-        public DateTimeOffset CreatedUTC { get; set; }
-
-        [Display(Name = "Modified")]
-        public DateTimeOffset ModifiedUTC { get; set; }
     }
 }
