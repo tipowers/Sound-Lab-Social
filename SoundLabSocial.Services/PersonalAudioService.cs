@@ -17,7 +17,7 @@ namespace SoundLabSocial.Services
             _userId = userId;
         }
 
-        public bool CreateSong(PersonalAudioCreate model)
+        public bool CreatePersonalAudio(PersonalAudioCreate model)
         {
             var entity = new PersonalAudio()
             {

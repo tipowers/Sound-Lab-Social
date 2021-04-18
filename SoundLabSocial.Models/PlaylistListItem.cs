@@ -9,6 +9,9 @@ namespace SoundLabSocial.Models
 {
     public class PlaylistListItem
     {
+        [Display(Name = "Playlist Id")]
+        public int PlaylistId { get; set; }
+
         [Display(Name = "Playlist Name")]
         public string PlaylistName { get; set; }
 

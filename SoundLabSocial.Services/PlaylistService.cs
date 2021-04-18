@@ -17,7 +17,7 @@ namespace SoundLabSocial.Services
             _userId = userId;
         }
 
-        public bool CreateSong(PlaylistCreate model)
+        public bool CreatePlaylist(PlaylistCreate model)
         {
             var entity = new Playlist()
             {
@@ -33,20 +33,20 @@ namespace SoundLabSocial.Services
             }
         }
 
-        /*public IEnumerable<PlaylistListItem> GetPlaylists()
+        public IEnumerable<PlaylistListItem> GetPlaylists()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query = ctx.Playlists
                     .Where(e => e.Id == _userId)
                     .Select(
-                    e => new Playlist
+                    e => new PlaylistListItem
                     {
                         PlaylistName = e.PlaylistName
                     }
                 );
                 return query.ToArray();
             }
-        }*/
+        }
     }
 }
