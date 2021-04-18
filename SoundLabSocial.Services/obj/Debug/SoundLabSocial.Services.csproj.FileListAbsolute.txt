@@ -14,3 +14,9 @@ C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabS
 C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Services\obj\Debug\SoundLabSocial.Services.csproj.CopyComplete
 C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Services\obj\Debug\SoundLabSocial.Services.dll
 C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Services\obj\Debug\SoundLabSocial.Services.pdb
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Services\bin\Debug\SoundLabSocial.Data.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Services\bin\Debug\SoundLabSocial.Models.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Services\bin\Debug\SoundLabSocial.Data.pdb
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Services\bin\Debug\SoundLabSocial.Data.dll.config
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Services\bin\Debug\SoundLabSocial.Models.pdb
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Services\bin\Debug\SoundLabSocial.Models.dll.config

@@ -1,4 +1,6 @@
-﻿using SoundLabSocial.Models;
+﻿using Microsoft.AspNet.Identity;
+using SoundLabSocial.Models;
+using SoundLabSocial.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,19 +15,27 @@ namespace SoundLabSocial.Controllers
         // GET: PersonalAudio
         public ActionResult Index()
         {
-            var model = new PersonalAudioListItem[0];
+            var userId = User.Identity.GetUserId();
+            var service = new PersonalAudioService(userId);
+            var model = service.GetPersonalAudios();
             return View(model);
         }
 
+        // CREATE: PersonalAudio
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(PersonalAudioCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+
+            var userId = User.Identity.GetUserId();
+            var service = new PersonalAudioService(userId);
+            service.CreatePersonalAudio(model);
+
+            return RedirectToAction("Index");
         }
     }
 }
