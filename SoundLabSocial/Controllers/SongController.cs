@@ -15,8 +15,7 @@ namespace SoundLabSocial.Controllers
         // GET: Song
         public ActionResult Index()
         {
-            var userId = User.Identity.GetUserId();
-            var service = new SongService(userId);
+            var service = CreateSongService();
             var model = service.GetSongs();
             return View(model);
         }
@@ -36,11 +35,17 @@ namespace SoundLabSocial.Controllers
                 return View(model);
             }
 
-            var userId = User.Identity.GetUserId();
-            var service = new SongService(userId);
+            var service = CreateSongService();
             service.CreateSong(model);
 
             return RedirectToAction("Index");
+        }
+
+        private SongService CreateSongService()
+        {
+            var userId = User.Identity.GetUserId();
+            var service = new SongService(userId);
+            return service;
         }
     }
 }

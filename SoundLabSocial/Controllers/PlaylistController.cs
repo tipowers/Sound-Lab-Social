@@ -15,8 +15,7 @@ namespace SoundLabSocial.Controllers
         // GET: Playlist
         public ActionResult Index()
         {
-            var userId = User.Identity.GetUserId();
-            var service = new PlaylistService(userId);
+            var service = CreatePlaylistService();
             var model = service.GetPlaylists();
             return View(model);
         }
@@ -36,11 +35,17 @@ namespace SoundLabSocial.Controllers
                 return View(model);
             }
 
-            var userId = User.Identity.GetUserId();
-            var service = new PlaylistService(userId);
+            var service = CreatePlaylistService();
             service.CreatePlaylist(model);
 
             return RedirectToAction("Index");
+        }
+
+        private PlaylistService CreatePlaylistService()
+        {
+            var userId = User.Identity.GetUserId();
+            var service = new PlaylistService(userId);
+            return service;
         }
     }
 }

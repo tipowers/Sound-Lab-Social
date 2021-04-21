@@ -15,8 +15,7 @@ namespace SoundLabSocial.Controllers
         // GET: PersonalAudio
         public ActionResult Index()
         {
-            var userId = User.Identity.GetUserId();
-            var service = new PersonalAudioService(userId);
+            var service = CreatePersonalAudioService();
             var model = service.GetPersonalAudios();
             return View(model);
         }
@@ -36,11 +35,17 @@ namespace SoundLabSocial.Controllers
                 return View(model);
             }
 
-            var userId = User.Identity.GetUserId();
-            var service = new PersonalAudioService(userId);
+            var service = CreatePersonalAudioService();
             service.CreatePersonalAudio(model);
 
             return RedirectToAction("Index");
+        }
+
+        private PersonalAudioService CreatePersonalAudioService()
+        {
+            var userId = User.Identity.GetUserId();
+            var service = new PersonalAudioService(userId);
+            return service;
         }
     }
 }
