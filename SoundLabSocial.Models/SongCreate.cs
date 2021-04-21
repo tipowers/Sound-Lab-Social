@@ -29,6 +29,6 @@ namespace SoundLabSocial.Models
         [Display(Name = "Release Year")]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
         [MaxLength(4, ErrorMessage = "There are too many characters in this field.")]
-        public DateTime ReleaseYear { get; set; }
+        public string ReleaseYear { get; set; }
     }
 }

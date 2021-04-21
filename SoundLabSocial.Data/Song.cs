@@ -26,7 +26,7 @@ namespace SoundLabSocial.Data
 
         public string SongAlbum { get; set; }
 
-        public DateTime ReleaseYear { get; set; }
+        public string ReleaseYear { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUTC { get; set; }

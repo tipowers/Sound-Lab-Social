@@ -48,7 +48,8 @@ namespace SoundLabSocial.Services
                         SongName = e.SongName,
                         SongArtist = e.SongArtist,
                         SongAlbum = e.SongAlbum,
-                        ReleaseYear = e.ReleaseYear
+                        ReleaseYear = e.ReleaseYear,
+                        CreatedUTC = e.CreatedUTC
                     }
                 );
                 return query.ToArray();

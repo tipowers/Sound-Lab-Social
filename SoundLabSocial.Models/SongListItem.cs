@@ -22,13 +22,9 @@ namespace SoundLabSocial.Models
         public string SongAlbum { get; set; }
 
         [Display(Name = "Release Year")]
-        public DateTime ReleaseYear { get; set; }
+        public string ReleaseYear { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUTC { get; set; }
-
-        [Display(Name = "Modified")]
-        public DateTimeOffset ModifiedUTC { get; set; }
-
     }
 }

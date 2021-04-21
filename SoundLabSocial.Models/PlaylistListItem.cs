@@ -17,8 +17,5 @@ namespace SoundLabSocial.Models
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUTC { get; set; }
-
-        [Display(Name = "Modified")]
-        public DateTimeOffset ModifiedUTC { get; set; }
     }
 }

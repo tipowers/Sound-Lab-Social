@@ -42,7 +42,8 @@ namespace SoundLabSocial.Services
                     .Select(
                     e => new PersonalAudioListItem
                     {
-                       AudioName = e.AudioName
+                       AudioName = e.AudioName,
+                       CreatedUTC = e.CreatedUTC
                     }
                 );
                 return query.ToArray();

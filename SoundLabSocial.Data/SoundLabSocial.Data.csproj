@@ -79,6 +79,10 @@
     <Compile Include="Migrations\202104152328475_AddedPlayListNamePropertyToPlaylistTable.Designer.cs">
       <DependentUpon>202104152328475_AddedPlayListNamePropertyToPlaylistTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104210004554_ChangedReleaseYearToString.cs" />
+    <Compile Include="Migrations\202104210004554_ChangedReleaseYearToString.Designer.cs">
+      <DependentUpon>202104210004554_ChangedReleaseYearToString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PersonalAudio.cs" />
     <Compile Include="Playlist.cs" />
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104152328475_AddedPlayListNamePropertyToPlaylistTable.resx">
       <DependentUpon>202104152328475_AddedPlayListNamePropertyToPlaylistTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104210004554_ChangedReleaseYearToString.resx">
+      <DependentUpon>202104210004554_ChangedReleaseYearToString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

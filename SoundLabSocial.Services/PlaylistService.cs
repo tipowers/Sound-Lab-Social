@@ -42,7 +42,8 @@ namespace SoundLabSocial.Services
                     .Select(
                     e => new PlaylistListItem
                     {
-                        PlaylistName = e.PlaylistName
+                        PlaylistName = e.PlaylistName,
+                        CreatedUTC = e.CreatedUTC
                     }
                 );
                 return query.ToArray();
