@@ -36,9 +36,14 @@ namespace SoundLabSocial.Controllers
             }
 
             var service = CreatePlaylistService();
-            service.CreatePlaylist(model);
 
-            return RedirectToAction("Index");
+            if (service.CreatePlaylist(model))
+            {
+                TempData["SaveResult"] = "Your playlist was created.";
+                return RedirectToAction("Index");
+            };
+            ModelState.AddModelError("", "Playlist could not be created.");
+            return View(model);
         }
 
         private PlaylistService CreatePlaylistService()

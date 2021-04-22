@@ -36,9 +36,14 @@ namespace SoundLabSocial.Controllers
             }
 
             var service = CreatePersonalAudioService();
-            service.CreatePersonalAudio(model);
-
-            return RedirectToAction("Index");
+            
+            if (service.CreatePersonalAudio(model))
+            {
+                TempData["SaveResult"] = "Your personal audio was created.";
+                return RedirectToAction("Index");
+            };
+            ModelState.AddModelError("", "Personal Audio could not be created.");
+            return View(model);
         }
 
         private PersonalAudioService CreatePersonalAudioService()

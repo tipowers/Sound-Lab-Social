@@ -36,9 +36,14 @@ namespace SoundLabSocial.Controllers
             }
 
             var service = CreateSongService();
-            service.CreateSong(model);
 
-            return RedirectToAction("Index");
+            if (service.CreateSong(model))
+            {
+                TempData["SaveResult"] = "Your song was created.";
+                return RedirectToAction("Index");
+            };
+            ModelState.AddModelError("", "Song could not be created.");
+            return View(model);
         }
 
         private SongService CreateSongService()
