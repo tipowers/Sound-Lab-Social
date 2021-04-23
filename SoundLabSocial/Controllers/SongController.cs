@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using SoundLabSocial.Data;
 using SoundLabSocial.Models;
 using SoundLabSocial.Services;
 using System;
@@ -20,12 +21,33 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
+        // GET: Song By Id
+        public SongDetail GetSongById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Songs
+                    .Single(e => e.SongId == id);
+                return new SongDetail
+                {
+                    SongId = entity.SongId,
+                    SongName = entity.SongName,
+                    SongArtist = entity.SongArtist,
+                    SongAlbum = entity.SongAlbum,
+                    ReleaseYear = entity.ReleaseYear,
+                    CreatedUTC = entity.CreatedUTC,
+                    ModifiedUTC = entity.ModifiedUTC
+                };
+            }
+        }
+
+        // CREATE: Song (Get)
         public ActionResult Create()
         {
             return View();
         }
 
-        // CREATE: Song
+        // CREATE: Song (Post)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(SongCreate model)
