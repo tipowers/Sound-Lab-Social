@@ -49,5 +49,21 @@ namespace SoundLabSocial.Services
                 return query.ToArray();
             }
         }
+
+        public PlaylistDetail GetPlaylistById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Playlists
+                    .Single(e => e.PlaylistId == id);
+                return new PlaylistDetail
+                {
+                    PlaylistId = entity.PlaylistId,
+                    PlaylistName = entity.PlaylistName,
+                    CreatedUTC = entity.CreatedUTC,
+                    ModifiedUTC = entity.ModifiedUTC
+                };
+            }
+        }
     }
 }

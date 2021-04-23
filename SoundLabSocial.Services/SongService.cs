@@ -55,5 +55,24 @@ namespace SoundLabSocial.Services
                 return query.ToArray();
             }
         }
+
+        public SongDetail GetSongById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Songs
+                    .Single(e => e.SongId == id);
+                return new SongDetail
+                {
+                    SongId = entity.SongId,
+                    SongName = entity.SongName,
+                    SongArtist = entity.SongArtist,
+                    SongAlbum = entity.SongAlbum,
+                    ReleaseYear = entity.ReleaseYear,
+                    CreatedUTC = entity.CreatedUTC,
+                    ModifiedUTC = entity.ModifiedUTC
+                };
+            }
+        }
     }
 }

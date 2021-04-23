@@ -13,7 +13,7 @@ namespace SoundLabSocial.Controllers
     [Authorize]
     public class SongController : Controller
     {
-        // GET: Song
+        // GET: All Songs
         public ActionResult Index()
         {
             var service = CreateSongService();
@@ -21,24 +21,13 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
-        // GET: Song By Id
-        public SongDetail GetSongById(int id)
+        // GET: Song Details
+        public ActionResult Details(int id)
         {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity = ctx.Songs
-                    .Single(e => e.SongId == id);
-                return new SongDetail
-                {
-                    SongId = entity.SongId,
-                    SongName = entity.SongName,
-                    SongArtist = entity.SongArtist,
-                    SongAlbum = entity.SongAlbum,
-                    ReleaseYear = entity.ReleaseYear,
-                    CreatedUTC = entity.CreatedUTC,
-                    ModifiedUTC = entity.ModifiedUTC
-                };
-            }
+            var svc = CreateSongService();
+            var model = svc.GetSongById(id);
+
+            return View(model);
         }
 
         // CREATE: Song (Get)

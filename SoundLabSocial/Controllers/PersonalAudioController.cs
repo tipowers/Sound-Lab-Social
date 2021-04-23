@@ -13,7 +13,7 @@ namespace SoundLabSocial.Controllers
     [Authorize]
     public class PersonalAudioController : Controller
     {
-        // GET: PersonalAudio
+        // GET: All PersonalAudios
         public ActionResult Index()
         {
             var service = CreatePersonalAudioService();
@@ -21,21 +21,13 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
-        // GET: Personal Audio By Id
-        public PersonalAudioDetail GetPersonalAudioById(int id)
+        // GET: Personal Audio Details
+        public ActionResult Details(int id)
         {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity = ctx.PersonalAudios
-                    .Single(e => e.AudioId == id);
-                return new PersonalAudioDetail
-                {
-                    AudioId = entity.AudioId,
-                    AudioName = entity.AudioName,
-                    CreatedUTC = entity.CreatedUTC,
-                    ModifiedUTC = entity.ModifiedUTC
-                };
-            }
+            var svc = CreatePersonalAudioService();
+            var model = svc.GetPersonalAudioById(id);
+
+            return View(model);
         }
 
         // CREATE: PersonalAudio (Get)

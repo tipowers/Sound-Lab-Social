@@ -1,0 +1,74 @@
+﻿@model SoundLabSocial.Models.SongDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SongDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SongId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SongName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SongArtist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongArtist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SongAlbum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongAlbum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUTC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.SongId  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

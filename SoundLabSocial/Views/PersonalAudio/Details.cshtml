@@ -1,0 +1,50 @@
+﻿@model SoundLabSocial.Models.PersonalAudioDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PersonalAudioDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AudioId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AudioId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AudioName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AudioName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUTC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.AudioId  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -13,7 +13,7 @@ namespace SoundLabSocial.Controllers
     [Authorize]
     public class PlaylistController : Controller
     {
-        // GET: Playlist
+        // GET: All Playlists
         public ActionResult Index()
         {
             var service = CreatePlaylistService();
@@ -21,21 +21,13 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
-        // GET: Playlist By Id
-        public PlaylistDetail GetPlaylistById(int id)
+        // GET: Playlist Details
+        public ActionResult Details(int id)
         {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity = ctx.Playlists
-                    .Single(e => e.PlaylistId == id);
-                return new PlaylistDetail
-                {
-                    PlaylistId = entity.PlaylistId,
-                    PlaylistName = entity.PlaylistName,
-                    CreatedUTC = entity.CreatedUTC,
-                    ModifiedUTC = entity.ModifiedUTC
-                };
-            }
+            var svc = CreatePlaylistService();
+            var model = svc.GetPlaylistById(id);
+
+            return View(model);
         }
 
         // CREATE: Playlist (Get)

@@ -49,5 +49,21 @@ namespace SoundLabSocial.Services
                 return query.ToArray();
             }
         }
+
+        public PersonalAudioDetail GetPersonalAudioById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.PersonalAudios
+                    .Single(e => e.AudioId == id);
+                return new PersonalAudioDetail
+                {
+                    AudioId = entity.AudioId,
+                    AudioName = entity.AudioName,
+                    CreatedUTC = entity.CreatedUTC,
+                    ModifiedUTC = entity.ModifiedUTC
+                };
+            }
+        }
     }
 }
