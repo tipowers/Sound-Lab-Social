@@ -57,6 +57,22 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
+        // UPDATE: Song
+        public ActionResult Edit(int id)
+        {
+            var service = CreateSongService();
+            var detail = service.GetSongById(id);
+            var model = new SongEdit
+            {
+                SongId = detail.SongId,
+                SongName = detail.SongName,
+                SongArtist = detail.SongArtist,
+                SongAlbum = detail.SongAlbum,
+                ReleaseYear = detail.ReleaseYear
+            };
+            return View(model);
+        }
+
         private SongService CreateSongService()
         {
             var userId = User.Identity.GetUserId();

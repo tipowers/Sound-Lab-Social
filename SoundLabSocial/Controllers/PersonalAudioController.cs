@@ -57,6 +57,19 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
+        // UPDATE: PersonalAudio
+        public ActionResult Edit(int id)
+        {
+            var service = CreatePersonalAudioService();
+            var detail = service.GetPersonalAudioById(id);
+            var model = new PersonalAudioEdit
+            {
+                AudioId = detail.AudioId,
+                AudioName = detail.AudioName
+            };
+            return View(model);
+        }
+
         private PersonalAudioService CreatePersonalAudioService()
         {
             var userId = User.Identity.GetUserId();

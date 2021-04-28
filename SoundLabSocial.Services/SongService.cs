@@ -61,7 +61,7 @@ namespace SoundLabSocial.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.Songs
-                    .Single(e => e.SongId == id);
+                    .Single(e => e.SongId == id && e.Id == _userId);
                 return new SongDetail
                 {
                     SongId = entity.SongId,
@@ -72,6 +72,22 @@ namespace SoundLabSocial.Services
                     CreatedUTC = entity.CreatedUTC,
                     ModifiedUTC = entity.ModifiedUTC
                 };
+            }
+        }
+
+        public bool UpdateSong(SongEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Songs
+                    .Single(e => e.SongId == model.SongId && e.Id == _userId);
+                entity.SongName = model.SongName;
+                entity.SongArtist = model.SongArtist;
+                entity.SongAlbum = model.SongAlbum;
+                entity.ReleaseYear = model.ReleaseYear;
+                entity.ModifiedUTC = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

@@ -55,7 +55,7 @@ namespace SoundLabSocial.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.PersonalAudios
-                    .Single(e => e.AudioId == id);
+                    .Single(e => e.AudioId == id && e.Id == _userId);
                 return new PersonalAudioDetail
                 {
                     AudioId = entity.AudioId,
@@ -63,6 +63,18 @@ namespace SoundLabSocial.Services
                     CreatedUTC = entity.CreatedUTC,
                     ModifiedUTC = entity.ModifiedUTC
                 };
+            }
+        }
+
+        public bool UpdatePersonalAudio(PersonalAudioEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.PersonalAudios
+                    .Single(e => e.AudioId == model.AudioId && e.Id == _userId);
+                entity.AudioName = model.AudioName;
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }
