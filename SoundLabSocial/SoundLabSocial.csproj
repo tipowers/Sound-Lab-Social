@@ -246,6 +246,9 @@
     <Content Include="Views\Song\Details.cshtml" />
     <Content Include="Views\PersonalAudio\Details.cshtml" />
     <Content Include="Views\Playlist\Details.cshtml" />
+    <Content Include="Views\Song\Edit.cshtml" />
+    <Content Include="Views\PersonalAudio\Edit.cshtml" />
+    <Content Include="Views\Playlist\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
