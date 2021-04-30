@@ -94,6 +94,30 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
+        // DELETE: Playlist (Get)
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreatePlaylistService();
+            var model = svc.GetPlaylistById(id);
+
+            return View(model);
+        }
+
+        // DELETE: Song (Post)
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePlaylist(int id)
+        {
+            var service = CreatePlaylistService();
+            service.DeletePlaylist(id);
+
+            TempData["SaveResult"] = "Your playlist was deleted";
+
+            return RedirectToAction("Index");
+        }
+
         private PlaylistService CreatePlaylistService()
         {
             var userId = User.Identity.GetUserId();

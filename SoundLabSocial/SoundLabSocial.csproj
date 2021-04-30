@@ -249,6 +249,9 @@
     <Content Include="Views\Song\Edit.cshtml" />
     <Content Include="Views\PersonalAudio\Edit.cshtml" />
     <Content Include="Views\Playlist\Edit.cshtml" />
+    <Content Include="Views\Song\Delete.cshtml" />
+    <Content Include="Views\PersonalAudio\Delete.cshtml" />
+    <Content Include="Views\Playlist\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

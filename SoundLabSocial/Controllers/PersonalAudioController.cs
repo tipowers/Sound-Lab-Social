@@ -94,6 +94,30 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
+        // DELETE: Personal Audio (Get)
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreatePersonalAudioService();
+            var model = svc.GetPersonalAudioById(id);
+
+            return View(model);
+        }
+
+        // DELETE: Personal Audio (Post)
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePersonalAudio(int id)
+        {
+            var service = CreatePersonalAudioService();
+            service.DeletePersonalAudio(id);
+
+            TempData["SaveResult"] = "Your personal audio was deleted";
+
+            return RedirectToAction("Index");
+        }
+
         private PersonalAudioService CreatePersonalAudioService()
         {
             var userId = User.Identity.GetUserId();

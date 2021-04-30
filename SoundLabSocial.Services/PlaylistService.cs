@@ -77,5 +77,18 @@ namespace SoundLabSocial.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeletePlaylist(int playlistId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Playlists
+                    .Single(e => e.PlaylistId == playlistId && e.Id == _userId);
+
+                ctx.Playlists.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

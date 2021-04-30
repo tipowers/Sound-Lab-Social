@@ -77,5 +77,18 @@ namespace SoundLabSocial.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeletePersonalAudio(int audioId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.PersonalAudios
+                    .Single(e => e.AudioId == audioId && e.Id == _userId);
+
+                ctx.PersonalAudios.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
