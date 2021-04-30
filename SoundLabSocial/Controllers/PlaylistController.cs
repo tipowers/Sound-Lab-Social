@@ -70,6 +70,30 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
+        // OVERLOADED UPDATE: Playlist
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, PlaylistEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.PlaylistId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreatePlaylistService();
+
+            if (service.UpdatePlaylist(model))
+            {
+                TempData["SaveResult"] = "Your playlist was updated.";
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "Your playlist could not be updated.");
+            return View(model);
+        }
+
         private PlaylistService CreatePlaylistService()
         {
             var userId = User.Identity.GetUserId();

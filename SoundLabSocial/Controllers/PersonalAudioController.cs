@@ -70,6 +70,30 @@ namespace SoundLabSocial.Controllers
             return View(model);
         }
 
+        // OVERLOADED UPDATE: Personal Audio
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, PersonalAudioEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.AudioId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreatePersonalAudioService();
+
+            if (service.UpdatePersonalAudio(model))
+            {
+                TempData["SaveResult"] = "Your personal audio was updated.";
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "Your personal audio could not be updated.");
+            return View(model);
+        }
+
         private PersonalAudioService CreatePersonalAudioService()
         {
             var userId = User.Identity.GetUserId();
