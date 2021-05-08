@@ -42,6 +42,7 @@ namespace SoundLabSocial.Services
                     .Select(
                     e => new PlaylistListItem
                     {
+                        PlaylistId = e.PlaylistId,
                         PlaylistName = e.PlaylistName,
                         CreatedUTC = e.CreatedUTC
                     }

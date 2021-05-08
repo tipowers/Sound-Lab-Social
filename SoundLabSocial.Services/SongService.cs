@@ -45,6 +45,7 @@ namespace SoundLabSocial.Services
                     .Select(
                     e => new SongListItem
                     {
+                        SongId = e.SongId,
                         SongName = e.SongName,
                         SongArtist = e.SongArtist,
                         SongAlbum = e.SongAlbum,

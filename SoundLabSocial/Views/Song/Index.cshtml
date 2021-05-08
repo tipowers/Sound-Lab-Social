@@ -20,50 +20,51 @@
     </div>
 }
 
-    <table class="table">
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SongName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SongArtist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SongAlbum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUTC)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.SongName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SongArtist)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SongAlbum)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReleaseYear)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedUTC)
-            </th>
-            <th></th>
+            @Html.HiddenFor(modelItem => item.SongId)
+            <td>
+                @Html.DisplayFor(modelItem => item.SongName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SongArtist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SongAlbum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUTC)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.SongId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.SongId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SongId })
+            </td>
         </tr>
+    }
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SongName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SongArtist)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SongAlbum)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ReleaseYear)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedUTC)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new {  id=item.SongId  }) |
-                    @Html.ActionLink("Details", "Details", new {  id=item.SongId  }) |
-                    @Html.ActionLink("Delete", "Delete", new {  id=item.SongId  })
-                </td>
-            </tr>
-        }
-
-    </table>
+</table>

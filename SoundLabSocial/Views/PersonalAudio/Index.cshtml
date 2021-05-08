@@ -33,19 +33,20 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AudioName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedUTC)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.AudioId  }) |
-                @Html.ActionLink("Details", "Details", new {  id=item.AudioId  }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.AudioId  })
-            </td>
-        </tr>
+<tr>
+    @Html.HiddenFor(modelItem => item.AudioId)
+    <td>
+        @Html.DisplayFor(modelItem => item.AudioName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CreatedUTC)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.AudioId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.AudioId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.AudioId })
+    </td>
+</tr>
     }
 
 </table>

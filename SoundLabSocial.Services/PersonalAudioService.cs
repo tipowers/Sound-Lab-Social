@@ -42,6 +42,7 @@ namespace SoundLabSocial.Services
                     .Select(
                     e => new PersonalAudioListItem
                     {
+                       AudioId = e.AudioId,
                        AudioName = e.AudioName,
                        CreatedUTC = e.CreatedUTC
                     }
