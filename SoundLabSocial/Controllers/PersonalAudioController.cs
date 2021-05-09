@@ -64,8 +64,10 @@ namespace SoundLabSocial.Controllers
             var detail = service.GetPersonalAudioById(id);
             var model = new PersonalAudioEdit
             {
-                AudioId = detail.AudioId,
-                AudioName = detail.AudioName
+                PersonalAudioId = detail.PersonalAudioId,
+                AudioName = detail.AudioName,
+                AudioMessage = detail.AudioMessage,
+                PlaylistId = detail.PlaylistId
             };
             return View(model);
         }
@@ -77,7 +79,7 @@ namespace SoundLabSocial.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.AudioId != id)
+            if (model.PersonalAudioId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);

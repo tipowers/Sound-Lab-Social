@@ -28,13 +28,16 @@
         <th>
             @Html.DisplayNameFor(model => model.CreatedUTC)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaylistId)
+        </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
 <tr>
-    @Html.HiddenFor(modelItem => item.AudioId)
+    @Html.HiddenFor(modelItem => item.PersonalAudioId)
     <td>
         @Html.DisplayFor(modelItem => item.AudioName)
     </td>
@@ -42,9 +45,12 @@
         @Html.DisplayFor(modelItem => item.CreatedUTC)
     </td>
     <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.AudioId }) |
-        @Html.ActionLink("Details", "Details", new { id = item.AudioId }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.AudioId })
+        @Html.DisplayFor(modelItem => item.PlaylistId)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.PersonalAudioId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.PersonalAudioId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.PersonalAudioId })
     </td>
 </tr>
     }

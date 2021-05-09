@@ -11,11 +11,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.AudioId)
+            @Html.DisplayNameFor(model => model.PersonalAudioId)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AudioId)
+            @Html.DisplayFor(model => model.PersonalAudioId)
         </dd>
 
         <dt>
@@ -24,6 +24,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.AudioName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AudioMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AudioMessage)
         </dd>
 
         <dt>
@@ -40,6 +48,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.ModifiedUTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaylistId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaylistId)
         </dd>
 
     </dl>

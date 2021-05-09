@@ -9,10 +9,16 @@ namespace SoundLabSocial.Models
 {
     public class PersonalAudioEdit
     {
-        [Display(Name = "Audio Id")]
-        public int AudioId { get; set; }
+        [Display(Name = "Personal Audio Id")]
+        public int PersonalAudioId { get; set; }
 
-        [Display(Name = "Audio Name")]
+        [Display(Name = "Personal Audio Name")]
         public string AudioName { get; set; }
+
+        [Display(Name = "Personal Audio Message")]
+        public string AudioMessage { get; set; }
+
+        [Display(Name = "Playlist Id")]
+        public int? PlaylistId { get; set; }
     }
 }

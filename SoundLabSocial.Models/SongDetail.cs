@@ -32,7 +32,8 @@ namespace SoundLabSocial.Models
 
         [Display(Name = "Playlist Id")]
         public int? PlaylistId { get; set; }
-
+        
+        //maybe not necessary
         public virtual PlaylistListItem Playlist { get; set; }
     }
 }

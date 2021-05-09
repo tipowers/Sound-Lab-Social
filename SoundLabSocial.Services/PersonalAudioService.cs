@@ -23,7 +23,9 @@ namespace SoundLabSocial.Services
             {
                 Id = _userId,
                 AudioName = model.AudioName,
-                CreatedUTC = DateTimeOffset.Now
+                AudioMessage = model.AudioMessage,
+                CreatedUTC = DateTimeOffset.Now,
+                PlaylistId = model.PlaylistId
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -42,9 +44,10 @@ namespace SoundLabSocial.Services
                     .Select(
                     e => new PersonalAudioListItem
                     {
-                       AudioId = e.AudioId,
+                       PersonalAudioId = e.PersonalAudioId,
                        AudioName = e.AudioName,
-                       CreatedUTC = e.CreatedUTC
+                       CreatedUTC = e.CreatedUTC,
+                       PlaylistId = e.PlaylistId
                     }
                 );
                 return query.ToArray();
@@ -56,13 +59,15 @@ namespace SoundLabSocial.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.PersonalAudios
-                    .Single(e => e.AudioId == id && e.Id == _userId);
+                    .Single(e => e.PersonalAudioId == id && e.Id == _userId);
                 return new PersonalAudioDetail
                 {
-                    AudioId = entity.AudioId,
+                    PersonalAudioId = entity.PersonalAudioId,
                     AudioName = entity.AudioName,
+                    AudioMessage = entity.AudioMessage,
                     CreatedUTC = entity.CreatedUTC,
-                    ModifiedUTC = entity.ModifiedUTC
+                    ModifiedUTC = entity.ModifiedUTC,
+                    PlaylistId = entity.PlaylistId
                 };
             }
         }
@@ -72,8 +77,10 @@ namespace SoundLabSocial.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.PersonalAudios
-                    .Single(e => e.AudioId == model.AudioId && e.Id == _userId);
+                    .Single(e => e.PersonalAudioId == model.PersonalAudioId && e.Id == _userId);
                 entity.AudioName = model.AudioName;
+                entity.AudioMessage = model.AudioMessage;
+                entity.PlaylistId = model.PlaylistId;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -84,7 +91,7 @@ namespace SoundLabSocial.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.PersonalAudios
-                    .Single(e => e.AudioId == audioId && e.Id == _userId);
+                    .Single(e => e.PersonalAudioId == audioId && e.Id == _userId);
 
                 ctx.PersonalAudios.Remove(entity);
 

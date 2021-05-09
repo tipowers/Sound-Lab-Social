@@ -68,7 +68,8 @@ namespace SoundLabSocial.Controllers
                 SongName = detail.SongName,
                 SongArtist = detail.SongArtist,
                 SongAlbum = detail.SongAlbum,
-                ReleaseYear = detail.ReleaseYear
+                ReleaseYear = detail.ReleaseYear,
+                PlaylistId = detail.PlaylistId
             };
             return View(model);
         }

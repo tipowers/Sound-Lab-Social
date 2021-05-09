@@ -11,7 +11,7 @@ namespace SoundLabSocial.Data
     public class PersonalAudio
     {
         [Key]
-        public int AudioId { get; set; }
+        public int PersonalAudioId { get; set; }
 
         [Required] 
         [ForeignKey(nameof(ApplicationUser))]
@@ -21,11 +21,17 @@ namespace SoundLabSocial.Data
         [Required]
         public string AudioName { get; set; }
 
+        public string AudioMessage { get; set; }
+
         [Required]
         public DateTimeOffset CreatedUTC { get; set; }
 
         public DateTimeOffset? ModifiedUTC { get; set; }
 
-        public virtual ICollection<Playlist> Playlists { get; set; }
+        //public virtual ICollection<Playlist> Playlists { get; set; }
+        [ForeignKey(nameof(Playlist))]
+        public int? PlaylistId { get; set; }
+
+        public virtual Playlist Playlist { get; set; }
     }
 }

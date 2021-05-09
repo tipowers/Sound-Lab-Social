@@ -10,15 +10,21 @@ namespace SoundLabSocial.Models
     public class PersonalAudioDetail
     {
         [Display(Name = "Personal Audio Id")]
-        public int AudioId { get; set; }
+        public int PersonalAudioId { get; set; }
 
         [Display(Name = "Personal Audio Name")]
         public string AudioName { get; set; }
+
+        [Display(Name = "Personal Audio Message")]
+        public string AudioMessage { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUTC { get; set; }
 
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUTC { get; set; }
+
+        [Display(Name = "Playlist Id")]
+        public int? PlaylistId { get; set; }
     }
 }
