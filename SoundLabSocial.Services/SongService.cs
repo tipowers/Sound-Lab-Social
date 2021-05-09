@@ -26,7 +26,8 @@ namespace SoundLabSocial.Services
                 SongArtist = model.SongArtist,
                 SongAlbum = model.SongAlbum,
                 ReleaseYear = model.ReleaseYear,
-                CreatedUTC = DateTimeOffset.Now
+                CreatedUTC = DateTimeOffset.Now//,
+                //Playlists = model.PlaylistId
             };
 
             using (var ctx = new ApplicationDbContext())

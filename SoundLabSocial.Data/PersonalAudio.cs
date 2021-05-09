@@ -26,6 +26,6 @@ namespace SoundLabSocial.Data
 
         public DateTimeOffset? ModifiedUTC { get; set; }
 
-        public virtual ICollection<Playlist> Playlists { get; set; } = new List<Playlist>();
+        public virtual ICollection<Playlist> Playlists { get; set; }
     }
 }

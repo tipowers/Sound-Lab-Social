@@ -23,6 +23,7 @@ namespace SoundLabSocial.Services
             {
                 Id = _userId,
                 PlaylistName = model.PlaylistName,
+                PersonalAudioId = model.PersonalAudioId,
                 CreatedUTC = DateTimeOffset.Now
             };
 
@@ -44,6 +45,7 @@ namespace SoundLabSocial.Services
                     {
                         PlaylistId = e.PlaylistId,
                         PlaylistName = e.PlaylistName,
+                        PersonalAudioId = e.PersonalAudioId,
                         CreatedUTC = e.CreatedUTC
                     }
                 );
@@ -61,6 +63,7 @@ namespace SoundLabSocial.Services
                 {
                     PlaylistId = entity.PlaylistId,
                     PlaylistName = entity.PlaylistName,
+                    PersonalAudioId = entity.PersonalAudioId,
                     CreatedUTC = entity.CreatedUTC,
                     ModifiedUTC = entity.ModifiedUTC
                 };
@@ -74,6 +77,7 @@ namespace SoundLabSocial.Services
                 var entity = ctx.Playlists
                     .Single(e => e.PlaylistId == model.PlaylistId && e.Id == _userId);
                 entity.PlaylistName = model.PlaylistName;
+                entity.PersonalAudioId = model.PersonalAudioId;
 
                 return ctx.SaveChanges() == 1;
             }

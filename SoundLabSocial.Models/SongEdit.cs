@@ -23,5 +23,8 @@ namespace SoundLabSocial.Models
 
         [Display(Name = "Release Year")]
         public string ReleaseYear { get; set; }
+
+        [Display(Name = "Playlist Id")]
+        public int? PlaylistId { get; set; }
     }
 }

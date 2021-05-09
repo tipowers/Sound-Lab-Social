@@ -21,7 +21,7 @@ namespace SoundLabSocial.Data
         public string Id { get; set; }       
         public virtual ApplicationUser ApplicationUser { get; set; }
 
-        public virtual ICollection<Song> Song { get; set; }
+        public virtual ICollection<Song> Song { get; set; } = new List<Song>();
 
         [ForeignKey(nameof(PersonalAudio))]
         public int? PersonalAudioId { get; set; }

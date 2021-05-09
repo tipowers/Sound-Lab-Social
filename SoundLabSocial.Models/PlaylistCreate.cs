@@ -14,5 +14,11 @@ namespace SoundLabSocial.Models
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
         [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string PlaylistName { get; set; }
+
+        /*[Required]
+        [Display(Name = "User Id")]
+        public string Id { get; set; }*/
+        [Display(Name = "Personal Audio Id")]
+        public int PersonalAudioId { get; set; }
     }
 }

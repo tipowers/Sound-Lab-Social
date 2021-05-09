@@ -29,5 +29,10 @@ namespace SoundLabSocial.Models
 
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUTC { get; set; }
+
+        [Display(Name = "Playlist Id")]
+        public int? PlaylistId { get; set; }
+
+        public virtual PlaylistListItem Playlist { get; set; }
     }
 }

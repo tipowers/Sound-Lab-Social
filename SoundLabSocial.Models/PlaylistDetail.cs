@@ -15,6 +15,11 @@ namespace SoundLabSocial.Models
         [Display(Name = "Playlist Name")]
         public string PlaylistName { get; set; }
 
+        public virtual ICollection<SongListItem> Songs { get; set; }
+
+        [Display(Name = "Personal Audio Id")]
+        public int? PersonalAudioId { get; set; }
+
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUTC { get; set; }
 

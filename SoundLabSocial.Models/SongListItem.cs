@@ -26,5 +26,12 @@ namespace SoundLabSocial.Models
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUTC { get; set; }
+
+        [Display(Name = "Playlist Id")]
+        public int? PlaylistId { get; set; }
+
+        //might not work
+        [Display(Name = "Playlist Name")]
+        public string PlaylistName { get; set; }
     }
 }
