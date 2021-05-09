@@ -9,14 +9,19 @@ namespace SoundLabSocial.Models
 {
     public class SongEdit
     {
+        [Display(Name = "Song Id")]
         public int SongId { get; set; }
 
+        [Display(Name = "Song Name")]
         public string SongName { get; set; }
 
+        [Display(Name = "Song Artist")]
         public string SongArtist { get; set; }
 
+        [Display(Name = "Song Album")]
         public string SongAlbum { get; set; }
 
+        [Display(Name = "Release Year")]
         public string ReleaseYear { get; set; }
     }
 }
