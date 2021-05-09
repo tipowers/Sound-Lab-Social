@@ -18,7 +18,7 @@ namespace SoundLabSocial.Models
         /*[Required]
         [Display(Name = "User Id")]
         public string Id { get; set; }*/
-        [Display(Name = "Personal Audio Id")]
-        public int PersonalAudioId { get; set; }
+        /*[Display(Name = "Personal Audio Id")]
+        public int PersonalAudioId { get; set; }*/
     }
 }

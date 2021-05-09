@@ -26,8 +26,8 @@ namespace SoundLabSocial.Services
                 SongArtist = model.SongArtist,
                 SongAlbum = model.SongAlbum,
                 ReleaseYear = model.ReleaseYear,
-                CreatedUTC = DateTimeOffset.Now//,
-                //Playlists = model.PlaylistId
+                CreatedUTC = DateTimeOffset.Now,
+                PlaylistId = model.PlaylistId
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -51,7 +51,8 @@ namespace SoundLabSocial.Services
                         SongArtist = e.SongArtist,
                         SongAlbum = e.SongAlbum,
                         ReleaseYear = e.ReleaseYear,
-                        CreatedUTC = e.CreatedUTC
+                        CreatedUTC = e.CreatedUTC,
+                        PlaylistId = e.PlaylistId
                     }
                 );
                 return query.ToArray();
@@ -72,7 +73,8 @@ namespace SoundLabSocial.Services
                     SongAlbum = entity.SongAlbum,
                     ReleaseYear = entity.ReleaseYear,
                     CreatedUTC = entity.CreatedUTC,
-                    ModifiedUTC = entity.ModifiedUTC
+                    ModifiedUTC = entity.ModifiedUTC,
+                    PlaylistId = entity.PlaylistId
                 };
             }
         }
@@ -88,6 +90,7 @@ namespace SoundLabSocial.Services
                 entity.SongAlbum = model.SongAlbum;
                 entity.ReleaseYear = model.ReleaseYear;
                 entity.ModifiedUTC = DateTimeOffset.UtcNow;
+                entity.PlaylistId = model.PlaylistId;
 
                 return ctx.SaveChanges() == 1;
             }

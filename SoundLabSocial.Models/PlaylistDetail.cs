@@ -15,7 +15,7 @@ namespace SoundLabSocial.Models
         [Display(Name = "Playlist Name")]
         public string PlaylistName { get; set; }
 
-        public virtual ICollection<SongListItem> Songs { get; set; }
+        public virtual ICollection<SongListItem> Songs { get; set; } = new List<SongListItem>();
 
         [Display(Name = "Personal Audio Id")]
         public int? PersonalAudioId { get; set; }
