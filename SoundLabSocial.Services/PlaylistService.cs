@@ -67,12 +67,14 @@ namespace SoundLabSocial.Services
                         SongArtist = e.SongArtist,
                         SongAlbum = e.SongAlbum,
                         ReleaseYear = e.ReleaseYear,
+                        CreatedUTC = e.CreatedUTC,
                         SongId = e.SongId
                     }).ToList(),
                     PersonalAudios = entity.PersonalRecording.Select(e => new Models.PersonalAudioListItem()
                     {
                         AudioName = e.AudioName,
-                        AudioMessage = e.AudioMessage
+                        AudioMessage = e.AudioMessage,
+                        CreatedUTC = e.CreatedUTC
                     }).ToList(),
                     CreatedUTC = entity.CreatedUTC,
                     ModifiedUTC = entity.ModifiedUTC

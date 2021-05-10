@@ -26,6 +26,9 @@
             @Html.DisplayNameFor(model => model.AudioName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.AudioMessage)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.CreatedUTC)
         </th>
         <th>
@@ -40,6 +43,9 @@
     @Html.HiddenFor(modelItem => item.PersonalAudioId)
     <td>
         @Html.DisplayFor(modelItem => item.AudioName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AudioMessage)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.CreatedUTC)

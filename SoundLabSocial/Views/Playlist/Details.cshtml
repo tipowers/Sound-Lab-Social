@@ -1,13 +1,12 @@
 ﻿@model SoundLabSocial.Models.PlaylistDetail
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Playlist Details";
 }
 
-<h2>Details</h2>
+<h2>Playlist Details</h2>
 
 <div>
-    <h4>PlaylistDetail</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -26,8 +25,6 @@
             @Html.DisplayFor(model => model.PlaylistName)
         </dd>
 
-
-
         <dt>
             @Html.DisplayNameFor(model => model.CreatedUTC)
         </dt>
@@ -45,6 +42,49 @@
         </dd>
 
     </dl>
+
+    <hr />
+    <h3>Personal Playlist Messages</h3>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonalAudios.First().AudioName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonalAudios.First().AudioMessage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedUTC)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.PersonalAudios)
+        {
+            <tr>
+                @Html.HiddenFor(modelItem => item.PersonalAudioId)
+                <td>
+                    @Html.DisplayFor(modelItem => item.AudioName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AudioMessage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedUTC)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.PersonalAudioId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.PersonalAudioId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PersonalAudioId })
+                </td>
+            </tr>
+        }
+    </table>
+
+    <hr />
+    <h3>Playlist Songs</h3>
+
     <table class="table">
         <tr>
             <th>
@@ -61,9 +101,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CreatedUTC)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PlaylistId)
             </th>
             <th></th>
         </tr>
@@ -88,16 +125,12 @@
                     @Html.DisplayFor(modelItem => item.CreatedUTC)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.PlaylistId)
-                </td>
-                <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.SongId }) |
                     @Html.ActionLink("Details", "Details", new { id = item.SongId }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.SongId })
                 </td>
             </tr>
         }
-
     </table>
 </div>
 <p>
