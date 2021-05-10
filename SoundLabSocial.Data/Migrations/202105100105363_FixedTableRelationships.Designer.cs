@@ -7,13 +7,13 @@ namespace SoundLabSocial.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class ActualFinalizedDataModelsForNow : IMigrationMetadata
+    public sealed partial class FixedTableRelationships : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ActualFinalizedDataModelsForNow));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FixedTableRelationships));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104152255122_ActualFinalizedDataModels...ForNow"; }
+            get { return "202105100105363_FixedTableRelationships"; }
         }
         
         string IMigrationMetadata.Source

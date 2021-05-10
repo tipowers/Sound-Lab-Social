@@ -44,7 +44,6 @@ namespace SoundLabSocial.Services
                     {
                         PlaylistId = e.PlaylistId,
                         PlaylistName = e.PlaylistName,
-                        PersonalAudioId = e.PersonalAudioId,
                         CreatedUTC = e.CreatedUTC
                     }
                 );
@@ -70,7 +69,11 @@ namespace SoundLabSocial.Services
                         ReleaseYear = e.ReleaseYear,
                         SongId = e.SongId
                     }).ToList(),
-                    PersonalAudioId = entity.PersonalAudioId,
+                    PersonalAudios = entity.PersonalRecording.Select(e => new Models.PersonalAudioListItem()
+                    {
+                        AudioName = e.AudioName,
+                        AudioMessage = e.AudioMessage
+                    }).ToList(),
                     CreatedUTC = entity.CreatedUTC,
                     ModifiedUTC = entity.ModifiedUTC
                 };

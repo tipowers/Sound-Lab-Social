@@ -23,9 +23,7 @@ namespace SoundLabSocial.Data
 
         public virtual ICollection<Song> Song { get; set; } = new List<Song>();
 
-        [ForeignKey(nameof(PersonalAudio))]
-        public int? PersonalAudioId { get; set; }
-        public virtual PersonalAudio PersonalAudio { get; set; }
+        public virtual ICollection<PersonalAudio> PersonalRecording { get; set; } = new List<PersonalAudio>();
 
         [Required]
         public DateTimeOffset CreatedUTC { get; set; }

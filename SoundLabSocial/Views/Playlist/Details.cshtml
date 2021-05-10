@@ -26,6 +26,8 @@
             @Html.DisplayFor(model => model.PlaylistName)
         </dd>
 
+
+
         <dt>
             @Html.DisplayNameFor(model => model.CreatedUTC)
         </dt>
@@ -43,6 +45,60 @@
         </dd>
 
     </dl>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Songs.First().SongName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Songs.First().SongArtist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Songs.First().SongAlbum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Songs.First().ReleaseYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaylistId)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Songs)
+        {
+            <tr>
+                @Html.HiddenFor(modelItem => item.SongId)
+                <td>
+                    @Html.DisplayFor(modelItem => item.SongName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SongArtist)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SongAlbum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseYear)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedUTC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PlaylistId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.SongId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.SongId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.SongId })
+                </td>
+            </tr>
+        }
+
+    </table>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new {  id = Model.PlaylistId  }) |

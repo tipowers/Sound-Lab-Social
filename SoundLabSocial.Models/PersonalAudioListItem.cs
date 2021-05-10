@@ -15,6 +15,9 @@ namespace SoundLabSocial.Models
         [Display(Name = "Personal Audio Name")]
         public string AudioName { get; set; }
 
+        [Display(Name = "Personal Audio Message")]
+        public string AudioMessage { get; set; }
+
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUTC { get; set; }
 

@@ -55,37 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202104130000102_InitialCreate.cs" />
-    <Compile Include="Migrations\202104130000102_InitialCreate.Designer.cs">
-      <DependentUpon>202104130000102_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104130006243_InitialMigration.cs" />
-    <Compile Include="Migrations\202104130006243_InitialMigration.Designer.cs">
-      <DependentUpon>202104130006243_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104130025075_AddedPersonalAudioAndPlaylistTables.cs" />
-    <Compile Include="Migrations\202104130025075_AddedPersonalAudioAndPlaylistTables.Designer.cs">
-      <DependentUpon>202104130025075_AddedPersonalAudioAndPlaylistTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104150209406_FinalizedDataModels.cs" />
-    <Compile Include="Migrations\202104150209406_FinalizedDataModels.Designer.cs">
-      <DependentUpon>202104150209406_FinalizedDataModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104152255122_ActualFinalizedDataModels...ForNow.cs" />
-    <Compile Include="Migrations\202104152255122_ActualFinalizedDataModels...ForNow.Designer.cs">
-      <DependentUpon>202104152255122_ActualFinalizedDataModels...ForNow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104152328475_AddedPlayListNamePropertyToPlaylistTable.cs" />
-    <Compile Include="Migrations\202104152328475_AddedPlayListNamePropertyToPlaylistTable.Designer.cs">
-      <DependentUpon>202104152328475_AddedPlayListNamePropertyToPlaylistTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104210004554_ChangedReleaseYearToString.cs" />
-    <Compile Include="Migrations\202104210004554_ChangedReleaseYearToString.Designer.cs">
-      <DependentUpon>202104210004554_ChangedReleaseYearToString.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105091700360_AddedPlaylistColumn.cs" />
-    <Compile Include="Migrations\202105091700360_AddedPlaylistColumn.Designer.cs">
-      <DependentUpon>202105091700360_AddedPlaylistColumn.cs</DependentUpon>
+    <Compile Include="Migrations\202105100105363_FixedTableRelationships.cs" />
+    <Compile Include="Migrations\202105100105363_FixedTableRelationships.Designer.cs">
+      <DependentUpon>202105100105363_FixedTableRelationships.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PersonalAudio.cs" />
@@ -98,29 +70,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104130000102_InitialCreate.resx">
-      <DependentUpon>202104130000102_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104130006243_InitialMigration.resx">
-      <DependentUpon>202104130006243_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104130025075_AddedPersonalAudioAndPlaylistTables.resx">
-      <DependentUpon>202104130025075_AddedPersonalAudioAndPlaylistTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104150209406_FinalizedDataModels.resx">
-      <DependentUpon>202104150209406_FinalizedDataModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104152255122_ActualFinalizedDataModels...ForNow.resx">
-      <DependentUpon>202104152255122_ActualFinalizedDataModels...ForNow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104152328475_AddedPlayListNamePropertyToPlaylistTable.resx">
-      <DependentUpon>202104152328475_AddedPlayListNamePropertyToPlaylistTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104210004554_ChangedReleaseYearToString.resx">
-      <DependentUpon>202104210004554_ChangedReleaseYearToString.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105091700360_AddedPlaylistColumn.resx">
-      <DependentUpon>202105091700360_AddedPlaylistColumn.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105100105363_FixedTableRelationships.resx">
+      <DependentUpon>202105100105363_FixedTableRelationships.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
