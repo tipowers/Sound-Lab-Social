@@ -46,6 +46,7 @@ namespace SoundLabSocial.Services
                     {
                        PersonalAudioId = e.PersonalAudioId,
                        AudioName = e.AudioName,
+                       AudioMessage = e.AudioMessage,
                        CreatedUTC = e.CreatedUTC,
                        PlaylistId = e.PlaylistId
                     }
