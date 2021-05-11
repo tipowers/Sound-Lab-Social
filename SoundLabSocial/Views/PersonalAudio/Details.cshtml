@@ -7,58 +7,55 @@
 <h2>Personal Audio Details</h2>
 
 <div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PersonalAudioId)
-        </dt>
+    <br />
 
-        <dd>
-            @Html.DisplayFor(model => model.PersonalAudioId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AudioName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AudioName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AudioMessage)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AudioMessage)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedUTC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedUTC)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ModifiedUTC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ModifiedUTC)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PlaylistId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PlaylistId)
-        </dd>
-
-    </dl>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonalAudioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AudioName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AudioMessage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaylistId)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.PersonalAudioId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.AudioName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.AudioMessage)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CreatedUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ModifiedUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PlaylistId)
+            </td>
+            <th></th>
+        </tr>
+    </table>
 </div>
+
+<br />
 <p>
     @Html.ActionLink("Edit Personal Audio", "Edit", new {  id = Model.PersonalAudioId  }) |
     @Html.ActionLink("Back to Personal Audio List", "Index")

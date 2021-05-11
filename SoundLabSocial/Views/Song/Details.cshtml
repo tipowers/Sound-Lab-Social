@@ -7,73 +7,66 @@
 <h2>Song Details</h2>
 
 <div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.SongId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SongId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SongName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SongName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SongArtist)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SongArtist)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SongAlbum)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SongAlbum)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ReleaseYear)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ReleaseYear)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedUTC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedUTC)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ModifiedUTC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ModifiedUTC)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PlaylistId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PlaylistId)
-        </dd>
-    </dl>
+    <br />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SongId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SongName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SongArtist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SongAlbum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaylistId)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.SongId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SongName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SongArtist)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SongAlbum)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ReleaseYear)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CreatedUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ModifiedUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PlaylistId)
+            </td>
+            <th></th>
+        </tr>
+    </table>
 </div>
+
+<br />
 <p>
     @Html.ActionLink("Edit Song", "Edit", new {  id = Model.SongId  }) |
     @Html.ActionLink("Back to Song List", "Index")
