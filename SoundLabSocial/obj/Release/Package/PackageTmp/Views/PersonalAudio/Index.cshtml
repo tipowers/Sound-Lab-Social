@@ -1,0 +1,64 @@
+﻿@model IEnumerable<SoundLabSocial.Models.PersonalAudioListItem>
+
+@{
+    ViewBag.Title = "Personal Audio";
+}
+
+<h2>Memories</h2>
+
+<p>
+    @Html.ActionLink("Create New Personal Audio", "Create")
+</p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AudioName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AudioMessage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaylistId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    @Html.HiddenFor(modelItem => item.PersonalAudioId)
+    <td>
+        @Html.DisplayFor(modelItem => item.AudioName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AudioMessage)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CreatedUTC)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PlaylistId)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.PersonalAudioId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.PersonalAudioId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.PersonalAudioId })
+    </td>
+</tr>
+    }
+
+</table>

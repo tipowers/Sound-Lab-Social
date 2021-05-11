@@ -1,0 +1,87 @@
+﻿@model SoundLabSocial.Models.SongDetail
+
+@{
+    ViewBag.Title = "Delete Song";
+}
+
+<h2>Delete Song</h2>
+
+<h3>Are you sure you want to delete this song?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SongId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SongName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SongArtist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongArtist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SongAlbum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongAlbum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaylistId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaylistId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Confirm Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to Song List", "Index")
+        </div>
+    }
+</div>

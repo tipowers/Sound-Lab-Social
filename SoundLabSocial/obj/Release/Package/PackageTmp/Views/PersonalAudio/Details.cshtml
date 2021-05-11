@@ -1,0 +1,62 @@
+﻿@model SoundLabSocial.Models.PersonalAudioDetail
+
+@{
+    ViewBag.Title = "Personal Audio Details";
+}
+
+<h2>Personal Audio Details</h2>
+
+<div>
+    <br />
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonalAudioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AudioName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AudioMessage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaylistId)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.PersonalAudioId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.AudioName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.AudioMessage)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CreatedUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ModifiedUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PlaylistId)
+            </td>
+            <th></th>
+        </tr>
+    </table>
+</div>
+
+<br />
+<p>
+    @Html.ActionLink("Edit Personal Audio", "Edit", new {  id = Model.PersonalAudioId  }) |
+    @Html.ActionLink("Back to Personal Audio List", "Index")
+</p>

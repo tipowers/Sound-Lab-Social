@@ -1,0 +1,16 @@
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\SoundLabSocial.Models.dll.config
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\SoundLabSocial.Models.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\SoundLabSocial.Models.pdb
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\EntityFramework.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\EntityFramework.xml
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\obj\Release\SoundLabSocial.Models.csprojAssemblyReference.cache
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\obj\Release\SoundLabSocial.Models.csproj.CoreCompileInputs.cache
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\obj\Release\SoundLabSocial.Models.csproj.CopyComplete
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\obj\Release\SoundLabSocial.Models.dll
+C:\Users\tpowe\Desktop\d3V\ElevenFiftyProjects\RedBadge\SoundLabSocial\SoundLabSocial.Models\obj\Release\SoundLabSocial.Models.pdb

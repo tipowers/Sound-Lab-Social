@@ -1,0 +1,73 @@
+﻿@model SoundLabSocial.Models.SongDetail
+
+@{
+    ViewBag.Title = "Song Details";
+}
+
+<h2>Song Details</h2>
+
+<div>
+    <br />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SongId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SongName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SongArtist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SongAlbum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedUTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaylistId)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.SongId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SongName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SongArtist)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SongAlbum)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ReleaseYear)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CreatedUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ModifiedUTC)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PlaylistId)
+            </td>
+            <th></th>
+        </tr>
+    </table>
+</div>
+
+<br />
+<p>
+    @Html.ActionLink("Edit Song", "Edit", new {  id = Model.SongId  }) |
+    @Html.ActionLink("Back to Song List", "Index")
+</p>

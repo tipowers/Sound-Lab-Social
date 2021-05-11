@@ -10,7 +10,6 @@ namespace SoundLabSocial.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "SoundLabSocial.Data.ApplicationDbContext";
         }
 
         protected override void Seed(SoundLabSocial.Data.ApplicationDbContext context)

@@ -1,0 +1,55 @@
+﻿@model SoundLabSocial.Models.PlaylistDetail
+
+@{
+    ViewBag.Title = "Delete Playlist";
+}
+
+<h2>Delete Playlist</h2>
+
+<h3>Are you sure you want to delete this playlist?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaylistId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaylistId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaylistName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaylistName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUTC)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Confirm Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to Playlist List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<SoundLabSocial.Models.PlaylistListItem>
+
+@{
+    ViewBag.Title = "Playlists";
+}
+
+<h2>Playlists</h2>
+
+<p>
+    @Html.ActionLink("Create New Playlist", "Create")
+</p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaylistName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUTC)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    @Html.HiddenFor(modelItem => item.PlaylistId)
+    <td>
+        @Html.DisplayFor(modelItem => item.PlaylistName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CreatedUTC)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.PlaylistId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.PlaylistId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.PlaylistId })
+    </td>
+</tr>
+    }
+
+</table>
