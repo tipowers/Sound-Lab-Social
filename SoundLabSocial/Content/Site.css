@@ -1,6 +1,11 @@
-﻿body {
+﻿.navbar {
+    background-color: maroon;
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: burlywood;
 }
 
 /* Set padding to keep content from hitting the edges */
